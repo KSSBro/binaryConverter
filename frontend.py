@@ -1,26 +1,36 @@
 from tkinter import *
-import functions as back
-
+import backend as back
 
 def calc():
 	type = menuOpt.get()
+	input = conFromT.get()
 	if(type == 'ASCII -> Bin'):
-		back.atb()
+		rt, status = back.atb(input)
+		#message.delete(0, END)
+		messageT.set(status)
+		ans.set(rt)
 	elif(type == 'Hex -> Bin'):
-		back.htb()
+		back.htb(input)
 	elif(type == 'Dec -> Bin'):
-		back.dtb()
+		back.dtb(input)
 	elif(type == 'Oct -> Bin'):
-		back.otb()
+		back.otb(input)
 	else:
-		print('Select an option')
+		messageT.set("Select and option.")
+
+def file(): 
+	#print("Generate text file")
+	text = ans.get()
+	if(text != ""):
+		t_file = open('Binary.txt', 'w')
+		t_file.write(text)
 
 
 window = Tk()
-window.wm_title("Convertor")
+window.wm_title("Binary Converter")
 img = PhotoImage(file = 'logo.png')
 window.tk.call('wm', 'iconphoto', window._w, img)
-window.geometry("270x150")
+window.geometry("270x200")
 window.resizable(0,0)
 
 conOption = Label(window, text = "Select your conversion:-")
@@ -39,16 +49,24 @@ conFromT = StringVar()
 conFrom = Entry(window, textvariable = conFromT)
 conFrom.grid(row = 1, column = 0, pady = 10, padx = 5)
 
-conToT = StringVar()
-conTo = Entry(window, textvariable = conToT)
-conTo.grid(row = 1, column = 1, pady = 10, padx = 5)
+messageT = StringVar()
+message = Entry(window, textvariable = messageT)
+message.insert(0, 'Press Go! to convert')
+message.config(state = 'readonly')
+message.grid(row = 1, column = 1, pady = 10, padx = 5)
 
 goBut = Button(window, text = "Go!", command = calc)
 goBut.grid(row = 2 , column = 0, columnspan = 2)
  
-ans = StringVar
+ans = StringVar()
 answer = Entry(window, textvariable =  ans)
 answer.config(state = 'readonly')
 answer.grid(row = 3, columnspan = 2, pady = 10)
+
+printButton = Button(window, text = "Generate text file", command = file)
+printButton.grid(row = 4, column = 0, columnspan = 2)
+
+copy = Label(window, text = "Copyright © KSSBro 2018 | v0.1")
+copy.grid(row = 5, column = 0, columnspan = 2, pady = 15)
 
 window.mainloop()
