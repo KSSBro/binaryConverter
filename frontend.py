@@ -9,12 +9,14 @@ def calc():
 		#message.delete(0, END)
 		messageT.set(status)
 		ans.set(rt)
-	elif(type == 'Hex -> Bin'):
-		back.htb(input)
 	elif(type == 'Dec -> Bin'):
-		back.dtb(input)
+		rt, status = back.dtb(input)
+		messageT.set(status)
+		ans.set(rt)
 	elif(type == 'Oct -> Bin'):
 		back.otb(input)
+	elif(type == 'Hex -> Bin'):
+		back.htb(input)
 	else:
 		messageT.set("Select and option.")
 
