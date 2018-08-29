@@ -2,4 +2,4 @@
 
 - Convert HexaDecimal, OctaDecimal, Decimal and ASCII to Binary 
 
-*The app is not complete yet.(OTB & HTB)*
+*The app is not complete yet (OTB & HTB).*
