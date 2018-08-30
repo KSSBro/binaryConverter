@@ -68,7 +68,7 @@ answer.grid(row = 3, columnspan = 2, pady = 10)
 printButton = Button(window, text = "Generate text file", command = file)
 printButton.grid(row = 4, column = 0, columnspan = 2)
 
-copy = Label(window, text = "Copyright © KSSBro 2018 | v0.1")
+copy = Label(window, text = "Copyright © KSSBro 2018 | v0.2")
 copy.grid(row = 5, column = 0, columnspan = 2, pady = 15)
 
 window.mainloop()
