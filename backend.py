@@ -49,9 +49,31 @@ def dtb(input):
 		return (err, err)
 
 def otb(input):
-	print('OctaDecimal to binary')
+	retString = ""
+	digits = ['000','001', '010', '011', '100', '101', '110', '111']
+	try:
+		for i in range(0, len(input)):
+			octDigit = int(input[i])
+			binDigit = digits[octDigit] 
+			retString += binDigit
+		return (retString, cc)
+	except: 
+		return (err, err)
+
 
 def htb(input):
-	print('HexaDecimal to binary')
-
+	retString = ""
+	digitsNum = ['0000', '0001', '0010', '0011', '0100', '0101', '0110', '0111', '1000', '1001']
+	digitsHex = ['1010', '1011', '1100', '1101', '1110', '1111']
+	try: 
+		for i in range(0, len(input)): 
+			try:  
+				hexDigit = int(input[i])
+				retString += digitsNum[hexDigit]
+			except: 
+				hexDigit = ord(input[i])
+				retString += digitsHex[hexDigit - 65]
+		return (retString, cc)
+	except:
+		return (err, err) 
 

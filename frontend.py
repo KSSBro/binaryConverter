@@ -14,9 +14,13 @@ def calc():
 		messageT.set(status)
 		ans.set(rt)
 	elif(type == 'Oct -> Bin'):
-		back.otb(input)
+		rt, status = back.otb(input)
+		messageT.set(status)
+		ans.set(rt)
 	elif(type == 'Hex -> Bin'):
-		back.htb(input)
+		rt, status = back.htb(input)
+		messageT.set(status)
+		ans.set(rt)
 	else:
 		messageT.set("Select and option.")
 
@@ -38,7 +42,7 @@ window.resizable(0,0)
 conOption = Label(window, text = "Select your conversion:-")
 conOption.grid(row = 0, column = 0)
 
-options = ('ASCII -> Bin', 'Hex -> Bin', 'Dec -> Bin', 'Oct -> Bin')
+options = ('ASCII -> Bin', 'Dec -> Bin', 'Oct -> Bin', 'Hex -> Bin')
 
 menuOpt = StringVar()
 menuOpt.set('Select')
@@ -68,7 +72,7 @@ answer.grid(row = 3, columnspan = 2, pady = 10)
 printButton = Button(window, text = "Generate text file", command = file)
 printButton.grid(row = 4, column = 0, columnspan = 2)
 
-copy = Label(window, text = "Copyright © KSSBro 2018 | v0.2")
+copy = Label(window, text = "Copyright © KSSBro 2018 | v1.0")
 copy.grid(row = 5, column = 0, columnspan = 2, pady = 15)
 
 window.mainloop()
