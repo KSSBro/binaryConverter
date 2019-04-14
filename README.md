@@ -1,2 +1,9 @@
 # binaryConverter
-#### This app converts Hexadecimal, Octal, Decimal numbers and ASCII text to Binary.
+## This app converts Hexadecimal, Octal, Decimal numbers and ASCII text to Binary.
+
+### What this repo includes:
+- v0.1 
+- v0.2
+- v1.0(Final version)
+- Frontend Code (v1.0)
+- Backend Code (v1.0)
