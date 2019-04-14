@@ -1,6 +1,7 @@
 # binaryConverter
 
-### Download the app from the folder named 'dist v1.0'
+### Download the app from the folder named 'dist v1.0' or by going to the release section of the repo.
+>Downloading the 'logo.png' file is necessary, the app won't run without it.
 
 #### This desktop app converts Hexadecimal, Octal, Decimal numbers and ASCII text to Binary.
 #### Built with Python and the Tkinter GUI library.
