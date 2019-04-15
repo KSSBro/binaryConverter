@@ -9,8 +9,6 @@
 
 ##### What this repo includes:
 
-- v0.1 
-- v0.2
-- v1.0(Final version)
+- v1.0(Latest version)
 - Frontend Code (v1.0)
 - Backend Code (v1.0)
