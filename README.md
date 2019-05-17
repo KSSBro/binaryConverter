@@ -8,6 +8,5 @@
 
 ##### What this repo includes:
 
-- v1.0 (Latest version)
 - Frontend Code (v1.0)
 - Backend Code (v1.0)
