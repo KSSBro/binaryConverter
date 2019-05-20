@@ -11,11 +11,11 @@ This desktop app converts Hexadecimal, Octal, Decimal numbers and ASCII text to 
 
 ### Prerequisites
 
-[Python](https://www.python.org/) and [TKinter](https://docs.python.org/2/library/tkinter.html) are required to run this app using the source.
+[Python](https://www.python.org/) and [Tkinter](https://docs.python.org/2/library/tkinter.html) are required to run this app using the source.
 
 ### Installing and Running
 
-First install TKinter
+First install Tkinter
 
 ```bash
 pip install tkinter
