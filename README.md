@@ -19,7 +19,7 @@ This desktop app converts Hexadecimal, Octal, Decimal numbers and ASCII text to 
 After installing git, clone the repository on your machine
 
 ```
-git clone https://github.com/KSSBro/unicode.git
+git clone https://github.com/KSSBro/binaryConverter.git
 ```
 
 First install Tkinter
