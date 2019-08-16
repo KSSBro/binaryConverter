@@ -2,7 +2,7 @@
 
 This desktop app converts Hexadecimal, Octal, Decimal numbers and ASCII text to Binary. Built with Python 3.6.4 and the Tkinter GUI library.
 
-### What this repo includes:
+### What this repo contains:
 
 - Frontend Code (v1.0)
 - Backend Code (v1.0)
