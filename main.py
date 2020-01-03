@@ -5,14 +5,13 @@ def cli():
     """Made by KSSBro"""
 
 @click.command()
-@click.option('-from-type', prompt="From", help="The system you want to convert from")
-@click.option('-to-type', prompt="To", help="The system you want to convert to")
+@click.option('-from-type', prompt="From", help="decimal | binary | octal | hexadecimal | ascii")
+@click.option('-to-type', prompt="To", help="decimal | binary | octal | hexadecimal | ascii")
 @click.option('-value', prompt="Value", help="The value you want to convert")
 @click.option('-create-file', default="false", help="true/false")
 @click.option('--file-type', default="json", help="text/json")
 def convert(from_type, to_type, value, create_file, file_type):
-    print(from_type, to_type)
-    print("Convert function.")
+    print(from_type, to_type, int(value))
 
 cli.add_command(convert)
 
