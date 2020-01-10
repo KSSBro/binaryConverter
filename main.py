@@ -1,4 +1,5 @@
 import click
+import controller
 
 @click.group()
 def cli():
@@ -12,6 +13,7 @@ def cli():
 @click.option('--file-type', default="json", help="text/json")
 def convert(from_type, to_type, value, create_file, file_type):
     print(from_type, to_type, int(value))
+    data = controller.controller(from_type, to_type, value)
 
 cli.add_command(convert)
 
