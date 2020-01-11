@@ -1,17 +1,22 @@
-def controller(from_type, to_type, value):
-    print("controller function")
+def controller(form, text, delim, type_):
+    convertedList = []
+    if type_ == "encode":
+        elementList = list(text)
+    else:
+        elementList = text.split(delim)
 
-def to_dec():
-    print("to decimal")
+    print(elementList)
 
-def to_bin():
-    print("to binary")
+    for element in elementList:
+        if type_ == "encode":
+            converted = encoder(form, element)
+        else:
+            converted = decoder(form, element)
+        
+        convertedList.append(converted)
 
-def to_oct():
-    print("to octal")
+def encoder(form, raw):
+    pass
 
-def to_hex():
-    print("to hexadecimal")
-
-def to_ascii():
-    print("to ascii")
+def decoder(form, raw):
+    pass
