@@ -1,6 +1,6 @@
-<img alt="Bolt" src="https://raw.githubusercontent.com/KSSBro/bolt/master/resources/logo/logo.png" height="100">
+<img alt="Codec" src="https://raw.githubusercontent.com/KSSBro/bolt/master/resources/logo/logo.png" height="100">
 
-# Bolt
+# Codec
 A CLI text encoder/decoder.
 
 ## Authors
