@@ -10,7 +10,7 @@ def cli():
 @click.option('-form', prompt="Format", help="decimal | binary | octal | hexadecimal | base64")
 @click.option('-delimiter', default="space", help="space(default) | any delimiter you want to use")
 def encode(form, text, delimiter):
-    delim = backend.set_delimiter(delimiter)
+    delim = backend.setDelimiter(delimiter)
     backend.encode(form, text, delim)
 
 @click.command()
@@ -18,7 +18,7 @@ def encode(form, text, delimiter):
 @click.option('-form', prompt="Format", help="decimal | binary | octal | hexadecimal | base64")
 @click.option('-delimiter', default="space", help="space(default) | delimiter used in the encoded text")
 def decode(form, text, delimiter):
-    delim = backend.set_delimiter(delimiter)
+    delim = backend.setDelimiter(delimiter)
     backend.decode(form, text, delim)
 
 cli.add_command(encode)
