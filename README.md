@@ -1,4 +1,4 @@
-<img alt="Codec" src="https://raw.githubusercontent.com/KSSBro/bolt/master/resources/logo/logo.png" height="100">
+<img alt="Codec" src="https://raw.githubusercontent.com/KSSBro/bolt/master/resources/logo/logo.png" height="75">
 
 # Codec
 A CLI text encoder/decoder.
