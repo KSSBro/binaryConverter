@@ -4,7 +4,7 @@ import util
 
 @click.group()
 def cli():
-    """Made by KSSBro"""
+    """Made by KSSBro | v1.0"""
 
 @click.command()
 @click.option('-file-path', default="", help="Path of text file")
@@ -14,13 +14,22 @@ def cli():
 @click.option('-create-file', default="false", help="true: Create a file with the encoded text | false(default): Will not create a file")
 def encode(file_path, form, text, delimiter, create_file):
     delim = util.setDelimiter(delimiter)
-    if file_path != "":
-        text = util.readFile(file_path)
-    result = backend.encode(form, text, delim) 
-    if create_file == "false":
-        click.echo(result)
-    else:
-        util.createFile(result, "encoded_"+form+".txt") 
+    try:
+        if file_path != "":
+            text = util.readFile(file_path)
+    except:
+        return print("Couldn't read file: Invalid path or file name")
+    try:
+        result = backend.encode(form, text, delim) 
+    except:
+        return print("Some error occured while encoding!")
+    try:
+        if create_file == "false":
+            click.echo(result)
+        else:
+            util.createFile(result, "encoded_"+form+".txt") 
+    except:
+        return print("Couldn't create file")
 
 @click.command()
 @click.option('-file-path', default="", help="Path of file with encoded text")
@@ -30,13 +39,22 @@ def encode(file_path, form, text, delimiter, create_file):
 @click.option('-create-file', default="false", help="true: Create a file with the decoded text | false(default): Will not create a file")
 def decode(file_path, form, text, delimiter, create_file):
     delim = util.setDelimiter(delimiter)
-    if file_path != "":
-        text = util.readFile(file_path)
-    result = backend.decode(form, text, delim)
-    if create_file == "false":
-        click.echo(result)
-    else:
-        util.createFile(result, "decoded_"+form+".txt")
+    try:
+        if file_path != "":
+            text = util.readFile(file_path)
+    except:
+        return print("Couldn't read file: Invalid path or file name")
+    try:
+        result = backend.decode(form, text, delim)
+    except:
+        return print("Some error occured while decoding!")
+    try:
+        if create_file == "false":
+            click.echo(result)
+        else:
+            util.createFile(result, "decoded_"+form+".txt")
+    except:
+        return print("Couldn't create file")
 
 cli.add_command(encode)
 cli.add_command(decode)

@@ -17,9 +17,7 @@ def encode(form, raw, delimiter):
             elif form == "hexadecimal":
                 encodedList.append(hex(ord(element))[2:])
             else:
-                error["exists"] = True
-                error["msg"] = "Format error"
-                return print("Error")
+                return print("Invalid format input!")
         
         return delimiter.join(encodedList)
         
@@ -41,9 +39,8 @@ def decode(form, raw, delimiter):
             elif form == "hexadecimal":
                 decodedList.append(chr(int(element, 16)))
             else:
-                error["exists"] = True
-                error["msg"] = "Format error"
-                return print("Error")
+                return print("Invalid format input!")
+                
         return "".join(decodedList)
 
 
