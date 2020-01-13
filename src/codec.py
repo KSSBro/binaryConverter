@@ -1,3 +1,9 @@
+import six
+import packaging
+import packaging.version
+import packaging.specifiers
+import packaging.requirements
+
 import click
 import backend
 import util
