@@ -14,6 +14,10 @@ def createFile(result, name):
     file.write(result)
     print("File created! \nName: " + name)
 
+def readFile(path):
+    file = open(file_path, "r+")
+    return file.read()
+
 def encode(form, raw, delimiter):
     if form == "base64":
        return to_base64(raw)
