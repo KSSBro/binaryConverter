@@ -9,9 +9,14 @@ def setDelimiter(delimiter):
     else:
         return " " 
 
+def createFile(result, name):
+    file = open(name, "w+")
+    file.write(result)
+    print("File created! \nName: " + name)
+
 def encode(form, raw, delimiter):
     if form == "base64":
-        to_base64(raw)
+       return to_base64(raw)
     else:
         encodedList = []
         elementList = list(raw)
@@ -29,13 +34,13 @@ def encode(form, raw, delimiter):
                 error["msg"] = "Format error"
                 return print("Error")
         
-        print(delimiter.join(encodedList))
+        return delimiter.join(encodedList)
         
     
 
 def decode(form, raw, delimiter):
     if form == "base64":
-        from_base64(raw)
+        return from_base64(raw)
     else:
         decodedList = []
         elementList = raw.split(delimiter)
@@ -52,7 +57,7 @@ def decode(form, raw, delimiter):
                 error["exists"] = True
                 error["msg"] = "Format error"
                 return print("Error")
-        print("".join(decodedList))
+        return "".join(decodedList)
 
 def to_base64(value):
     base64String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
@@ -89,7 +94,7 @@ def to_base64(value):
             encodedList.append(base64String[ord(fromBin(prevBits))]+endString)
         else:
             encodedList.append(base64String[ord(fromBin(prevBits))])
-    print("".join(encodedList))
+    return "".join(encodedList)
 
 def from_base64(value):
     base64String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
@@ -108,15 +113,15 @@ def from_base64(value):
             binaryList.append(toBin(base64String.find(char)))
         binaryList[0] = binaryList[0][2:] + binaryList[1][2:4]
         binaryList[1] = binaryList[1][4:] + binaryList[2][2:6]
-        if binaryList[2] != "=":
+        if binaryList[2] != "00000000":
             binaryList[2] = binaryList[2][6:] + binaryList[3][2:8]
         else:
             binaryList[2] = ""
         binaryList[3] = ""
         for binaryEl in binaryList:
-            if binaryEl != "":
+            if binaryEl != "" and binaryEl != "00000000":
                 decodedList.append(fromBin(binaryEl))
-    print("".join(decodedList))
+    return "".join(decodedList)
 
 def toBin(value):
     bin_value = ""
