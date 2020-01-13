@@ -10,42 +10,8 @@ def setDelimiter(delimiter):
         return " " 
 
 def encode(form, raw, delimiter):
-    base64String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
-    encodedList = []
     if form == "base64":
-        elementList = []
-        a = 0
-        b = 3
-        while b < (len(raw)+3):
-            elementList.append(raw[a:b])
-            a = b
-            b += 3
-        for element in elementList:
-            charList = list(element)
-            prevBits = ""
-            curBitLength = 6
-            if len(element) < 3:
-                endString = ""
-                i = len(element)
-                while i < 3:
-                    endString += "="
-                    i += 1
-            for char in charList:
-                charNum = int(ord(char))
-                charBin = toBin(charNum)
-                sixBits = prevBits + charBin[0:curBitLength]
-                prevBits = charBin[curBitLength:]
-                curBitLength -= 2
-                encodedList.append(base64String[ord(fromBin(sixBits))])
-            if len(prevBits) < 6:
-                i = len(prevBits)
-                while i < 6:
-                    prevBits += "0"
-                    i += 1
-                encodedList.append(base64String[ord(fromBin(prevBits))]+endString)
-            else:
-                encodedList.append(base64String[ord(fromBin(prevBits))])
-        print("".join(encodedList))
+        to_base64(raw)
     else:
         encodedList = []
         elementList = list(raw)
@@ -69,7 +35,7 @@ def encode(form, raw, delimiter):
 
 def decode(form, raw, delimiter):
     if form == "base64":
-        print("Working on base64 decoding")
+        from_base64(raw)
     else:
         decodedList = []
         elementList = raw.split(delimiter)
@@ -87,6 +53,70 @@ def decode(form, raw, delimiter):
                 error["msg"] = "Format error"
                 return print("Error")
         print("".join(decodedList))
+
+def to_base64(value):
+    base64String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+    encodedList = []
+    elementList = []
+    a = 0
+    b = 3
+    while b < (len(value)+3):
+        elementList.append(value[a:b])
+        a = b
+        b += 3
+    for element in elementList:
+        charList = list(element)
+        prevBits = ""
+        curBitLength = 6
+        if len(element) < 3:
+            endString = ""
+            i = len(element)
+            while i < 3:
+                endString += "="
+                i += 1
+        for char in charList:
+            charNum = int(ord(char))
+            charBin = toBin(charNum)
+            sixBits = prevBits + charBin[0:curBitLength]
+            prevBits = charBin[curBitLength:]
+            curBitLength -= 2
+            encodedList.append(base64String[ord(fromBin(sixBits))])
+        if len(prevBits) < 6:
+            i = len(prevBits)
+            while i < 6:
+                prevBits += "0"
+                i += 1
+            encodedList.append(base64String[ord(fromBin(prevBits))]+endString)
+        else:
+            encodedList.append(base64String[ord(fromBin(prevBits))])
+    print("".join(encodedList))
+
+def from_base64(value):
+    base64String = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
+    elementList = []
+    decodedList = []
+    a = 0
+    b = 4
+    while b <= len(value):
+        elementList.append(value[a:b])
+        a = b
+        b += 4
+    for element in elementList:
+        charList = list(element)
+        binaryList = []
+        for char in charList:
+            binaryList.append(toBin(base64String.find(char)))
+        binaryList[0] = binaryList[0][2:] + binaryList[1][2:4]
+        binaryList[1] = binaryList[1][4:] + binaryList[2][2:6]
+        if binaryList[2] != "=":
+            binaryList[2] = binaryList[2][6:] + binaryList[3][2:8]
+        else:
+            binaryList[2] = ""
+        binaryList[3] = ""
+        for binaryEl in binaryList:
+            if binaryEl != "":
+                decodedList.append(fromBin(binaryEl))
+    print("".join(decodedList))
 
 def toBin(value):
     bin_value = ""
