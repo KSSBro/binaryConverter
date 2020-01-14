@@ -59,7 +59,7 @@ Options:
 - `-text`: text to encode if it's not in a file
 - `-form`: the format you want to encode the text in (decimal | binary | octal | hecadecimal | base64)
 - `-delimiter`: the delimiter you want to use in the encoded text, space is default
-- `--createfile`: true: will create a text file with the encoded text, false(defult) - won't create a file
+- `--createfile`: true: will create a text file with the encoded text, false(defult): won't create a file
 
 ```
 codec encode -text *ascii_text* -form *format* --createfile *true/false*
@@ -75,7 +75,7 @@ Options:
 - `-text`: text to decode if it's not in a file
 - `-form`: the format of the encoded text (decimal | binary | octal | hecadecimal | base64)
 - `-delimiter`: the delimiter used in the encoded text, space is default
-- `--createfile`: true: will create a text file with the decoded text, false(defult) - won't create a file
+- `--createfile`: true: will create a text file with the decoded text, false(defult): won't create a file
 
 ```
 codec decode -text *encoded_text* -form *format* --createfile *true/false*
