@@ -51,15 +51,25 @@ def fromBase64(value):
         charList = list(element)
         binaryList = []
         for char in charList:
-            binaryList.append(binary.toBin(base64String.find(char)))
-        binaryList[0] = binaryList[0][2:] + binaryList[1][2:4]
-        binaryList[1] = binaryList[1][4:] + binaryList[2][2:6]
-        if binaryList[2] != "00000000":
-            binaryList[2] = binaryList[2][6:] + binaryList[3][2:8]
-        else:
-            binaryList[2] = ""
-        binaryList[3] = ""
+            if char != "=":
+                binaryList.append(binary.toBin(base64String.find(char)))
+            else:
+                binaryList.append(char)
+        print(binaryList)
+        f = 2
+        l = 4
+        for i in range(4):
+            if i < 3:
+                if binaryList[i+1] != "=":
+                    binaryList[i] = binaryList[i][f:] + binaryList[i+1][2:l]
+                else:
+                    binaryList[i] = ""
+            else:
+                binaryList[i] = ""
+            f += 2
+            l += 2
+        print(binaryList)
         for binaryEl in binaryList:
-            if binaryEl != "" and binaryEl != "00000000":
+            if binaryEl != "":
                 decodedList.append(binary.fromBin(binaryEl))
     return "".join(decodedList)

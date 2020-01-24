@@ -46,7 +46,7 @@ def encode(filepath, form, text, delimiter, createfile):
 def decode(filepath, form, text, delimiter, createfile):
     delim = util.setDelimiter(delimiter)
     try:
-        if file_path != "":
+        if filepath != "":
             text = util.readFile(filepath)
     except:
         return print("Couldn't read file: Invalid path or file name")
