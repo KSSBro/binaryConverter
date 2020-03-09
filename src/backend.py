@@ -1,5 +1,6 @@
 import base64
 import binary
+import morse
 
 def encode(form, raw, delimiter):
     if form == "base64":
@@ -16,6 +17,8 @@ def encode(form, raw, delimiter):
                 encodedList.append(oct(ord(element))[2:])
             elif form == "hexadecimal":
                 encodedList.append(hex(ord(element))[2:])
+            elif form == "morse":
+                encodedList.append(morse.toMorse(element))
             else:
                 return print("Invalid format input!")
         
@@ -38,6 +41,8 @@ def decode(form, raw, delimiter):
                 decodedList.append(chr(int(element, 8)))
             elif form == "hexadecimal":
                 decodedList.append(chr(int(element, 16)))
+            elif form == "morse":
+                decodedList.append(morse.fromMorse(element))
             else:
                 return print("Invalid format input!")
                 

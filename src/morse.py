@@ -1,10 +1,11 @@
 import json
 with open("morse.json", 'r') as morseFile:
     morseData = json.load(morseFile)
-    print(morseData)
+    
+def toMorse(value):
+    return morseData[value.lower()]
 
-def toMorse():
-    pass
-
-def fromMorse():
-    pass
+def fromMorse(element):
+    for key, value in morseData.items():
+        if value == element.lower():
+            return key

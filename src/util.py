@@ -9,6 +9,6 @@ def createFile(result, name):
     file.write(result)
     print("File created! \nName: " + name)
 
-def readFile(path):
-    file = open(file_path, "r+")
+def readFile(filepath):
+    file = open(filepath, "r+")
     return file.read()
