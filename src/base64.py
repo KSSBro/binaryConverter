@@ -55,7 +55,6 @@ def fromBase64(value):
                 binaryList.append(binary.toBin(base64String.find(char)))
             else:
                 binaryList.append(char)
-        print(binaryList)
         f = 2
         l = 4
         for i in range(4):
@@ -68,7 +67,6 @@ def fromBase64(value):
                 binaryList[i] = ""
             f += 2
             l += 2
-        print(binaryList)
         for binaryEl in binaryList:
             if binaryEl != "":
                 decodedList.append(binary.fromBin(binaryEl))

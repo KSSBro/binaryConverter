@@ -80,7 +80,7 @@ Options:
 ```
 codec decode -text *encoded_text* -form *format* --createfile *true/false*
 ```
-
+    
 ## Release
 
 v1.0 has been released.
