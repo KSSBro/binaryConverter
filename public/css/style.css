@@ -28,8 +28,8 @@ body {
 }
 
 #main-container #left-container #main-logo {
-  height: 100px;
-  margin: 40px 0px 0px 75px;
+  height: 75px;
+  margin: 40px 0px 40px 75px;
 }
 
 #main-container #left-container #description {
@@ -75,6 +75,58 @@ body {
   margin: 120px 0px 0px 50px;
 }
 
+@media only screen and (max-width: 1000px) {
+  #main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #main-container #left-container {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  #main-container #right-container {
+    display: none;
+  }
+
+  #main-container #left-container #main-logo {
+    margin: 50px 0px 0px 0px;
+  }
+
+  #main-container #left-container #description {
+    margin-left: 20px;
+    text-align: left;
+    font-size: 16px;
+  }
+
+  #main-container #left-container #btn-container {
+    position: relative;
+    margin: auto;
+    top: 20px;
+    width: 250px;
+  }
+
+  #main-container #left-container #btn-container .button {
+    margin: 5px;
+    height: 40px;
+    background: none;
+    font-size: 16px;
+    color: black;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 4px;
+  }
+
+  #main-container #left-container #kssbro-logo {
+    margin: 80px 0px 0px 0px;
+    height: 25px;
+  }
+}
+
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 1024px) {
   body {
     overflow-y: scroll;
@@ -98,8 +150,8 @@ body {
   }
 
   #main-container #left-container #main-logo {
-    height: 75px;
-    margin: 50px 0px 0px 0px;
+    height: 50px;
+    margin: 50px 0px 30px 0px;
   }
 
   #main-container #left-container #description {
@@ -132,53 +184,3 @@ body {
   }
 }
 
-@media only screen and (max-width: 600px) {
-  #main-container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  #main-container #left-container {
-    height: 100%;
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-  }
-
-  #main-container #right-container {
-    display: none;
-  }
-
-  #main-container #left-container #main-logo {
-    margin: 50px 0px 0px 0px;
-  }
-
-  #main-container #left-container #description {
-    margin-left: 20px;
-    text-align: left;
-    font-size: 16px;
-  }
-
-  #main-container #left-container #btn-container {
-    position: relative;
-    margin: auto;
-    top: 20px;
-    width: 250px;
-  }
-
-  #main-container #left-container #btn-container .button {
-    margin: 5px;
-    height: 40px;
-    background: none;
-    font-size: 16px;
-    color: black;
-    width: 150px;
-    border: 1px solid black;
-    border-radius: 4px;
-  }
-
-  #main-container #left-container #kssbro-logo {
-    margin: 80px 0px 0px 0px;
-    height: 25px;
-  }
-}
