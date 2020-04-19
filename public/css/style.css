@@ -75,7 +75,7 @@ body {
   margin: 120px 0px 0px 50px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
   #main-container {
     display: flex;
     flex-direction: column;
