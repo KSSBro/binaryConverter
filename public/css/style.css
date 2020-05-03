@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background: #f4f4f4;
+}
+
+*:focus {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+    text-decoration: none;
+}
+
+p a {
+    color: black;
+}
+
+#main-container {
+    position: relative;
+    height: 500px;
+    width: 1000px;
+    margin: 125px auto;
+    /* background: black; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#data-container {
+    position: relative;
+    height: 500px;
+    width: 36%;
+    background: white;
+    color: black;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+#title {
+    position: relative;
+    font-family: "Anton", sans-serif;
+    font-size: 35px;
+    font-weight: 100;
+    letter-spacing: 10px;
+    margin: 40px 0px 0px 25px;  
+}
+
+#subtitle {
+    font-family: "Roboto", sans-serif;
+    color: grey;
+    font-size: 15px;
+    margin: 0px 0px 0px 25px;
+}
+
+#description {
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    margin: 35px 15px 0px 25px;
+}
+
+#language {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    height: 20px;
+    width: 60px;
+    font-size: 12px;
+    color: white;
+    background: black;
+    border: 0px;
+    cursor: default;
+    margin: 10px 0px 0px 25px;
+    border-radius: 3px;
+}
+
+#btn-container {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 65px 0px 0px 25px;
+}
+
+.btn {
+    height: 35px;
+    width: 100px;
+    color: black;
+    background: white;
+    border: 1px solid black;
+    /* border: 0px; */
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: black;
+    color: white;
+}
+
+#label-container {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0px 0px 25px;
+}
+
+.label {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    height: 20px;
+    width: 60px;
+    font-size: 14px;
+    color: black;
+    background: #f2f2f2;
+    border: 0px;
+    cursor: default;
+    border-radius: 3px;
+}
+
+#license {
+    margin-left: 5px;
+}
+
+#footnote {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    margin: 85px 0px 0px 25px;
+    color: black;
+    font-weight: bold;
+}
+
+#terminal-container {
+    position: relative;
+    height: 500px;
+    width: 62%;
+    background: white;
+    color: black;
+    margin-left: 2%;
+    font-family: "Roboto", sans-serif;   
+    word-wrap: break-word;
+    overflow: scroll;
+    overflow-x: hidden;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* width */
+#terminal-container::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+#terminal-container::-webkit-scrollbar-track {
+    background: white;
+}
+
+/* Handle */
+#terminal-container::-webkit-scrollbar-thumb {
+    background: black;
+}
+
+/* Handle on hover */
+#terminal-container::-webkit-scrollbar-thumb:hover {
+    display: none;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) { 
+    #main-container {
+        position: relative;
+        height: auto;
+        width: 80%;
+        margin: 75px auto;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+
+    #data-container {
+        width: 100%;
+        height: 1000px;
+    }
+
+    #title {
+        font-size: 70px;
+        letter-spacing: 20px;
+        margin: 70px 0px 0px 50px;  
+    }
+    
+    #subtitle {
+        font-size: 30px;
+        margin: 0px 0px 0px 50px;
+    }
+    
+    #description {
+        font-size: 32px;
+        margin: 70px 40px 0px 50px;
+    }
+    
+    #language {
+        height: 40px;
+        width: 120px;
+        font-size: 24px;
+        margin: 20px 0px 0px 50px;
+        border-radius: 3px;
+    }
+    
+    #btn-container {
+        margin: 130px 0px 0px 50px;
+    }
+    
+    .btn {
+        height: 70px;
+        width: 200px;
+        border: 2px solid black;
+        font-family: "Roboto", sans-serif;
+        font-size: 26px;
+        margin-right: 10px;
+    }
+    
+    #label-container {
+        margin: 30px 0px 0px 50px;
+    }
+    
+    .label {
+        height: 40px;
+        width: 120px;
+        font-size: 28px;
+        border-radius: 6px;
+    }
+    
+    #license {
+        margin-left: 15px;
+    }
+    
+    #footnote {
+        font-family: "Roboto", sans-serif;
+        font-size: 28px;
+        margin: 190px 0px 0px 50px;
+    }
+
+
+    #terminal-container {
+        width: 100%;
+        height: 500px;
+        margin-left: 0px;
+        margin-bottom: 50px;
+        font-size: 24px;
+    }
+}

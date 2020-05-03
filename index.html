@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="description" content="Instahunter is a CLI app that can fetch posts, user data and search results from Instagram.">
+    <meta name="keywords" content="KSSBro, Projects, Instahunter, Instagram, hunter, scrape, HTML, CSS, JavaScript, Python, NodeJS, Static, Flutter, React">
+    <meta name="author" content="KSSBro">
+    <meta charset="UTF-8">
+    <title>Codec</title>
+    <link rel="stylesheet" href="public/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="public/css/termynal.css" type="text/css"/>
+    <link rel="shortcut icon" href="public/images/icon.webp" type="image/webp"/>
+</head>
+<body>
+    <div class="container" id="main-container">
+        <div class="container" id="data-container">
+            <h1 id="title">CODEC</h1>
+            <a href="https://github.com/KSSBro/codec"><p id="subtitle">KSSBro/codec</p></a>
+            <p id="description">Codec is a CLI ASCII text encoder and decoder.</p>
+            <button id="language">PYTHON</button>
+            
+            <div class="container" id="btn-container">
+                <a href="public/bin/codec.exe"><button class="btn" id="down-btn">DOWNLOAD</button></a>
+                <a href="https://github.com/KSSBro/codec"><button class="btn" id="repo-btn">REPOSITORY</button></a>
+                <a href="https://github.com/KSSBro/codec/blob/master/README.md"><button class="btn" id="readme-btn">README</button></a>
+            </div>
+            <div class="container" id="label-container">
+                <button class="label" id="build">v1.0</button>
+                <button class="label" id="license">MIT</button>
+            </div>
+
+            <p id="footnote">BUILT WITH &#10084 BY <a href="https://kssbro.github.io">KSSBro</a></p>
+        </div>
+        <div class="container" id="terminal-container" data-termynal>
+            <span data-ty="input">codec encode -form base64 -text "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ut ligula  feugiat, pretium elit sed, eleifend lacus."</span>
+            <span data-ty="progress"></span>
+            <span data-ty="output">TG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQsIGNvbnNlY3RldHVyIGFkaXBpc2NpbmcgZWxpdC4gQWxpcXVhbSB1dCBsaWd1bGEgZmV1Z2lhdCwgcHJldGl1bSBlbGl0IHNlZCwgZWxlaWZlbmQgbGFjdXMu</span>
+        </div>
+    </div>
+
+    <script src="public/js/termynal.js" data-termynal-container="#terminal-container"></script>
+</body>
+</html>
+
