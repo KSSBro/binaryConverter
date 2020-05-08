@@ -1,4 +1,13 @@
-import six
+'''
+    codec.py
+
+    Author: KSSBro
+    Copyright:  Copyright © 2020, KSSBro
+    License: MIT
+    Version: 1.0
+'''
+
+import six  
 import packaging
 import packaging.version
 import packaging.specifiers

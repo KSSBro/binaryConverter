@@ -1,7 +1,7 @@
 <img alt="Codec" src="https://raw.githubusercontent.com/KSSBro/codec/gh-pages/public/images/logo.png" height="75">
 
 # Codec
-A CLI ASCII text encoder/decoder.
+[Codec](https://kssbro.github.io/codec) is a CLI ASCII text encoder/decoder.
 
 ## Getting Started
 
@@ -29,14 +29,6 @@ Running from the source:
 
 ```
 python codec.py
-```
-
-Create an executable using pyinstaller:
-
-```
-pip install pyinstaller
-
-pyinstaller codec.py --onefile
 ```
 
 To get help use **--help**:
@@ -81,15 +73,24 @@ Options:
 codec decode -text *encoded_text* -form *format* --createfile *true/false*
 ```
     
-## Release
+## Release & Changelog
 
-v1.0 has been released.
+Latest Relase: v1.0
 
-## Built with
+Changelog:
+- Added command **encode**
+- Added command **decode**
 
-- [Python](https://www.python.org/)
-- [Click](https://click.palletsprojects.com/en/7.x/)
-- [Pyinstaller](https://www.pyinstaller.org/)(Executable)
+## Libraries
+
+- [Click](https://click.palletsprojects.com/en/7.x/) was used to make the CLI
+- [Pyinstaller](https://www.pyinstaller.org/) was used to build the executable
+- A customized version of [termynal](https://github.com/ines/termynal) by [Ines Montani](https://github.com/ines) was used on the [gh-pages website](https://kssbro.github.io/instahunter) to display the output 
+ 
+## Contributing
+
+Fork the repository and open a pull request to contribute.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## Authors
 
