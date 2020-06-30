@@ -3,6 +3,13 @@
 # Codec
 [Codec](https://kssbro.github.io/codec) is a CLI ASCII text encoder/decoder.
 
+Formats currently supported: 
+- Base64
+- Binary 
+- Octal
+- Hexadecimal
+- Decimal 
+
 ## Getting Started
 
 ### Prerequisites
