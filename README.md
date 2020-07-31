@@ -21,7 +21,7 @@ To run the app from source - [Git](https://git-scm.com/) is needed to clone the 
 After installing **git**, clone the repository on your machine
 
 ```
-git clone https://github.com/KSSBro/codec.git
+git clone https://github.com/Araekiel/codec.git
 ```
 
 After installing **Python**, install **Click** with **pip**

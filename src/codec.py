@@ -1,8 +1,8 @@
 '''
     codec.py
 
-    Author: KSSBro
-    Copyright:  Copyright © 2020, KSSBro
+    Author: Araekiel
+    Copyright:  Copyright © 2020, Kumar Shashwat
     License: MIT
     Version: 1.0
 '''
@@ -19,7 +19,7 @@ import util
 
 @click.group()
 def cli():
-    """Made by KSSBro | v1.0"""
+    """Made by Araekiel | v1.0"""
 
 @click.command()
 @click.option('-filepath', default="", help="Path of text file")
