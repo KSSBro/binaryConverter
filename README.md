@@ -1,7 +1,7 @@
-<img alt="Codec" src="https://raw.githubusercontent.com/KSSBro/codec/gh-pages/public/images/logo.png" height="75">
+<img alt="Codec" src="https://raw.githubusercontent.com/Araekiel/codec/gh-pages/public/images/logo.png" height="75">
 
 # Codec
-[Codec](https://kssbro.github.io/codec) is a CLI ASCII text encoder/decoder.
+[Codec](https://arekiel.github.io/codec) is a CLI ASCII text encoder/decoder.
 
 Formats currently supported: 
 - Base64
@@ -92,7 +92,7 @@ Changelog:
 
 - [Click](https://click.palletsprojects.com/en/7.x/) was used to make the CLI
 - [Pyinstaller](https://www.pyinstaller.org/) was used to build the executable
-- A customized version of [termynal](https://github.com/ines/termynal) by [Ines Montani](https://github.com/ines) was used on the [gh-pages website](https://kssbro.github.io/instahunter) to display the output 
+- A customized version of [termynal](https://github.com/ines/termynal) by [Ines Montani](https://github.com/ines) was used on the [gh-pages website](https://araekiel.github.io/instahunter) to display the output 
  
 ## Contributing
 
@@ -101,7 +101,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Authors
 
-- **KSSBro** - [Github](https://github.com/KSSBro)
+- **Araekiel** - [Github](https://github.com/Araekiel)
 
 ## License
 
