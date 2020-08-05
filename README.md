@@ -20,13 +20,13 @@ To run the app from source - [Git](https://git-scm.com/) is needed to clone the 
 
 After installing **git**, clone the repository on your machine
 
-```
+```bash
 git clone https://github.com/Araekiel/codec.git
 ```
 
 After installing **Python**, install **Click** with **pip**
 
-```
+```bash
 pip install click
 ```
 
@@ -34,17 +34,17 @@ pip install click
 
 Running from the source:
 
-```
+```bash
 python codec.py
 ```
 
 To get help use **--help**:
 
-```
+```bash
 codec --help
 ```
 
-```
+```bash
 codec encode --help
 ```
 
@@ -60,7 +60,7 @@ Options:
 - `-delimiter`: the delimiter you want to use in the encoded text, space is default
 - `--createfile`: true: will create a text file with the encoded text, false(defult): won't create a file
 
-```
+```bash
 codec encode -text *ascii_text* -form *format* --createfile *true/false*
 ```
 
@@ -76,7 +76,7 @@ Options:
 - `-delimiter`: the delimiter used in the encoded text, space is default
 - `--createfile`: true: will create a text file with the decoded text, false(defult): won't create a file
 
-```
+```bash
 codec decode -text *encoded_text* -form *format* --createfile *true/false*
 ```
     
