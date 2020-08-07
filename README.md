@@ -13,7 +13,7 @@ Formats currently supported:
 - Decimal 
 
 <br/>
-<img alt="Screenshot" src="https://raw.githubusercontent.com/Araekiel/codec/gh-pages/public/images/screenshot.jpg">
+<img alt="Screenshot" src="https://raw.githubusercontent.com/Araekiel/codec/gh-pages/public/images/screenshot.JPG">
 
 ## Getting Started
 
