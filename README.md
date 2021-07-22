@@ -3,7 +3,7 @@
 # Codec
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)]() [![GitHub Release](https://img.shields.io/badge/release-v1.0.1-blue)]() [![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](http://makeapullrequest.com) 
 
-[Codec](https://arekiel.github.io/codec) is a CLI app that can encode and decode ASCII test to and from various formats.
+[Codec](https://arekiel.github.io/codec) is a CLI app to encode into and decode from various formats, ASCII text.
 
 Formats currently supported: 
 - Base64
